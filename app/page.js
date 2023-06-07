@@ -11,7 +11,7 @@ export default function page() {
 </div>
 <div className={styles.div2}>
 
-<Image src={"/bannerImg.jpg"} alt="banner Image" layout="fill"/>
+<Image src={"/bannerImg.jpg"} alt="banner Image" layout="fill" priority/>
 </div>
     </div>
   )

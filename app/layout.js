@@ -1,6 +1,8 @@
+"use client";
 import Header from './components/Header';
 import './globals.css'
 import { Inter } from 'next/font/google'
+import { SessionProvider } from "next-auth/react";
 const inter = Inter({ subsets: ['latin'] })
 
 // global meta tag for website
@@ -22,14 +24,24 @@ icons: {
 };
 
 
-export default function RootLayout({ children }) {
+
+export default function RootLayout({ children,
+  ...props }) {
   return (
     <html lang="en">
       <body className={inter.className}>
+  
+      
+
+
+
+       <SessionProvider session={props.session}>
+       
       <Header />
-      {children}
-      
-      
+       {children}
+       
+       </SessionProvider>
+  
       </body>
     </html>
   )

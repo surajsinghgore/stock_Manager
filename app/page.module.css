@@ -40,6 +40,7 @@ font-size: 1.4vw;
 border: none;
 margin-top: 3vw;
 cursor: pointer;
+color: white;
 font-family: 'Rajdhani', sans-serif;
 transition: all 0.3s;
 }
